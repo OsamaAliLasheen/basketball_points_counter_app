@@ -24,6 +24,9 @@ class PointsCounter extends StatelessWidget {
         ),
         body: Column(
           children: [
+            const SizedBox(
+              height: 32,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -79,9 +82,12 @@ class PointsCounter extends StatelessWidget {
                     ),
                   ],
                 ),
-                VerticalDivider(
-                  thickness: 1,
-                  color: Colors.grey[400],
+                SizedBox(
+                  height: 390,
+                  child: VerticalDivider(
+                    thickness: 1,
+                    color: Colors.grey[400],
+                  ),
                 ),
                 Column(
                   children: [
@@ -145,7 +151,7 @@ class PointsCounter extends StatelessWidget {
                   minimumSize: const Size(160, 60)),
               onPressed: () {},
               child: const Text(
-                'Add 1 Point',
+                'Reset',
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
